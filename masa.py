@@ -45,3 +45,5 @@ def checker(username, exist_usernames):
 
 
 print(checker(exist_usernames, new_signup["username"]))
+
+print("hey")

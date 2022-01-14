@@ -33,3 +33,5 @@ def display_scores(scores):
 
 
 display_scores(scores)
+
+only_hundred = filter()
