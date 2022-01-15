@@ -21,17 +21,18 @@ scores = [
     {
         "date": "Jan 9, 2022",
         "opp": "Sacramento Kings",
-        "blazer_score": 103,
+        "blazer_score": 99,
         "opp_score": 88
     },
 ]
 
 
 def display_scores(scores):
-    list(map(lambda x: print("Blazers: ",
-                             x["blazer_score"], ",", "Opponent: ", x["opp_score"]), scores))
+    list(map(lambda score: print("Your Portland Trailblazers: ",
+                                 score["blazer_score"], ",", score["opp"], score["opp_score"]), scores))
 
 
 display_scores(scores)
 
-only_hundred = filter()
+only_hundred = filter(lambda score: score.get("blazer_score") > 100, scores)
+print("Games Blazers scored over 100: ", list(only_hundred))
